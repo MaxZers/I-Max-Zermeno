@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom'; /*Estamos importando unicamente BrowserRouter de la libreria. Podemos usar HashRouter cuando nuestra pagina es estatica*/ 
+import Routes from './routes'; /*importamos nuestras rutas de la carpeta routes su archivo index.jsx*/
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+/*import Header from './components/common/header'; Forma de importar un componente uno por uno*/
+import { Header, Footer } from './components/common'; /*Forma de importar todos los componentes de un archivo*/
+
+/*Definimos nuestra app como un functional component*/
+/*La etiqueta Routes va a mostrar las rutas que tenemos definidas en index.jsx de la carpeta routes*/
+const App = () => {
+  return(
+    <BrowserRouter>
+        <Header/>
+        <Routes/>
+        <Footer/>
+    </BrowserRouter>
+  )
+};
 
 export default App;
