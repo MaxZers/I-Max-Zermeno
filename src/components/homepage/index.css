@@ -1,0 +1,75 @@
+.image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30%;
+    overflow: hidden;
+}
+
+@keyframes vanishing {
+    0% {opacity: 100%;}
+    25% {opacity: 75%;}
+    50% {opacity: 50%;}
+    75% {opacity: 25%;}
+    100% {opacity: 0%;}
+}
+
+#home-image{
+    width: 15%;
+    height: 20%;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 3;
+    animation: vanishing 5s linear 1.5s infinite alternate;
+}
+
+#home-image2{
+    width: 15%;
+    height: 20%;
+    position: absolute;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    font-size: 1.5rem;
+}
+
+.description-container > p,h1{
+    margin: 0;
+}
+
+.description-container > h1{
+    text-shadow: 0px 1.5px 2px;
+}
+
+.last-entrances-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 45%;
+    
+}
+
+.entrance{
+    height: 100%;
+    width: 30%;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue;
+}
+
+.entrance > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 30%;
+}
