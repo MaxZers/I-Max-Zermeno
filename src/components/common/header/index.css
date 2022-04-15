@@ -20,6 +20,14 @@
 
 }
 
+#menu-mobile-hidden{
+    display: none;
+}
+
+#menu-mobile-button{
+    display: none;
+}
+
 .header-container > nav {
     width: 100%;
     height: 100%;
@@ -90,9 +98,9 @@ li :hover{
     font-size: 1em;
     width: 20%;
     border-radius: 20px;
-    font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
+    overflow: hidden;
     background-color: var(--list-letter-color-hover);
     color: var(--shadow);
     transition: all .3s;
@@ -109,6 +117,90 @@ li :hover{
     background-color: var(--list-letter-color-hover);
     color: var(--shadow);
     transition: all .3s;
-   transform: scale(1.2);
-   box-shadow: 5px 5px 10px var(--shadow);
+    transform: scale(1.2);
+    box-shadow: 5px 5px 10px var(--shadow);
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        width: 100%;
+        height: 5vh;
+        max-height: 7vh;
+        background-color: var(--backcolor1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 2px 10px var(--shadow);
+    }
+
+    .header-container > nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .search-container {
+        display: none;
+    }
+
+    #search-bar{
+        display: none;
+    }
+
+    #search-button{
+        display: none;
+    }
+
+    li :hover{
+        color: var(--list-letter-color-hover);
+        font-size: 1rem;
+        text-shadow: 0px 3px 5px var(--shadow);
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .header-container {
+        width: 100%;
+        height: 5vh;
+        max-height: 7vh;
+        background-color: var(--backcolor1);
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0px 2px 10px var(--shadow);
+        /*padding: 10px;*/
+    }
+
+    .header-container > nav {
+        display: none;
+    }
+
+    #menu-mobile{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--backcolor1);
+    }
+
+    #menu-mobile > ul,li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        list-style: none;
+        color: var(--list-letter-color1);
+        font-weight: 700;
+    }
+
+    #menu-mobile-button{
+        display: flex;
+        color: var(--list-letter-color1);
+    }
 }

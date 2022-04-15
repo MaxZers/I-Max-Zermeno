@@ -22,10 +22,20 @@ const originalinput = () =>{
     myelement.setAttribute("id", "search-bar")
 };
 
+const menuMobile =() =>{
+    let menuButtom = document.querySelector(".menu-mobile-identificator")
+    if (menuButtom.getAttribute("id")==="menu-mobile-hidden"){
+        menuButtom.setAttribute("id","menu-mobile")
+    } else if (menuButtom.getAttribute("id")==="menu-mobile"){
+        menuButtom.setAttribute("id","menu-mobile-hidden")
+    }
+};
+
 const Header = () =>{
     return(
         <>
             <header className="header-container">
+            <h2 id="menu-mobile-button" onClick={menuMobile}>Menu</h2>
                 <nav>
                     <ul>
                         <li>
@@ -47,6 +57,22 @@ const Header = () =>{
                     </div>
                 </nav>
             </header>
+            <nav className="menu-mobile-identificator" id="menu-mobile-hidden">
+                <ul>
+                    <li>
+                        <Link to='/'>Inicio</Link>
+                    </li>
+                    <li>
+                        <Link to='/galeria'>Galería</Link>
+                    </li>
+                    <li>
+                        <Link to='/sobremi'>Sobre mí</Link>
+                    </li>
+                    <li>
+                        <Link to='/contacto'>Contácto</Link>
+                    </li>
+                </ul>
+            </nav>
         </>
     );
 };
