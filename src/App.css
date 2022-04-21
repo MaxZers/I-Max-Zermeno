@@ -1,8 +1,23 @@
+/*Este es el contenedor principal de tooodas nuestras paginas*/
+
 .main-container{
-  height: 81vh;
+  min-height: 81vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .main-container{
+      min-height: 87vh;
+      margin-bottom: 90vh;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-container{
+      margin-bottom: 90vh;
+}
 }

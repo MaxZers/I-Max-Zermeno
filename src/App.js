@@ -12,9 +12,9 @@ const App = () => {
   return(
     <BrowserRouter>
         <Header/>
-        <div className='main-container'> {/*Con este div hacemos que el conteiner aplique para todas nuestras paginas*/ }
+        <main className='main-container'> {/*Con este div hacemos que el conteiner aplique para todas nuestras paginas*/ }
             <Routes/>
-        </div>
+        </main>
         <Footer/>
     </BrowserRouter>
   )

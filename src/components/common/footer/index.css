@@ -44,7 +44,8 @@ a{
 @media (max-width: 768px) {
     .footer-container{
         width: 100%;
-        height: 8vh;
+        height: 7vh;
+        position: fixed;
     }
 
     span{
@@ -66,7 +67,7 @@ a{
     }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 450px) {
     #facebook-tittle{
         display: none;
     }

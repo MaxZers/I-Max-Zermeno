@@ -13,21 +13,24 @@ const changentrance = (e) =>{
     if (!e) e= window.event;
     let mytarget = e.currentTarget.id;
     var myelement="";
-    switch(mytarget){
-        case 'test':
-            myelement = document.getElementById(mytarget)
-            myelement.setAttribute("class", "entrance-hover")
-            break
-        case 'test2':
-            myelement = document.getElementById(mytarget)
-            myelement.setAttribute("class", "entrance-hover")
-            break
-        case 'test3':
-            myelement = document.getElementById(mytarget)
-            myelement.setAttribute("class", "entrance-hover")
-            break
-        default:
-    };
+    let actualWith = window.innerWidth;
+    if (actualWith > 768){
+        switch(mytarget){
+            case 'test':
+                myelement = document.getElementById(mytarget)
+                myelement.setAttribute("class", "entrance-hover")
+                break
+            case 'test2':
+                myelement = document.getElementById(mytarget)
+                myelement.setAttribute("class", "entrance-hover")
+                break
+            case 'test3':
+                myelement = document.getElementById(mytarget)
+                myelement.setAttribute("class", "entrance-hover")
+                break
+            default:
+        };
+  } 
 };
 
 const originalentrance = (e) =>{
@@ -53,6 +56,7 @@ const originalentrance = (e) =>{
 
 const Homepage = () => (
     <>
+        <div className="homepage-container">
             <div className="image-container">
                 <img id='home-image' src={homeimage} alt="Author presentation"/>
                 <img id='home-image2' src={homeimage2} alt="Author presentation"/>
@@ -72,6 +76,7 @@ const Homepage = () => (
                     <img src={corecoreada3} alt="last entrance 3"/>
                 </div>
             </div>
+        </div>
     </>
 );
 
